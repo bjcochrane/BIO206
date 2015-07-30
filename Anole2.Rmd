@@ -1,0 +1,31 @@
+---
+title: <center>II.  Speciation</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+bibliography: Anole2.bib
+output: 
+    html_document:
+       css: Chapter.css
+---
+```{r,echo=FALSE}
+library (knitcitations)
+cite_options(citation_format = "pandoc", style = "text",
+  hyperlink = FALSE, cite.style = "authoryear", super = FALSE,
+  max.names = 4)
+```
+### Background notes for me
+
+Second half of hhmi video makes a good case.  Also, they have exercise we could do somehow, with sequence data set for input into [http://www.phylogeny.fr/](http://www.phylogeny.fr/)
+
+Original citation `r citep("10.1126/science.1232392")` is a fairly painful paper to work through, and key figure is confusing to say the least.
+
+### Video link
+
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/rdZOwyDbyL0?feature=player_detailpage&start=599" frameborder="0" allowfullscreen></iframe>
+
+### Bibliography
+
+```{r,echo=FALSE,message=FALSE}
+write.bibtex(file="Anole2.bib")
+```
+
