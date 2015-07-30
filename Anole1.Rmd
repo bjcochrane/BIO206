@@ -1,0 +1,44 @@
+---
+title: <center>Anole Phylogeny</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+bibliography: Anole1.bib
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+```{r,echo=FALSE}
+library (knitcitations)
+cite_options(citation_format = "pandoc", style = "text",
+  hyperlink = FALSE, cite.style = "authoryear", super = FALSE,
+  max.names = 4)
+```
+
+### Introduction
+
+This video provides an excellent introduction to the work of Jonathan losos on the anolid lizards of the western Caribbean. It consists of two parts.  In the first part, the focus is on the processes of adaptation that have occurred within islands among different species.  The second part then asks how those adaptive processes relate to speciation in the Caribbean as a whole.
+
+By clicking on the video below, you will be able to see part 1, which serves as an excellent introduction to what we will be covering in class this week.  As you watch it, think about what it does (and does not) demonstrate.  For example
+
+### Questions
+
+1.  While the demonstrations shown seem to be pretty clear in demonstrating the adaptive significance leg and foot pad morphology in Anoles, to the experiments themselves truly demonstrate evolution by natural selection?
+2.  Think about the experiment described in the latter portion of the video, in which Anoles were introduced onto islands whose natural populations had been extirpated by a hurricane.  Given what you know about the *genetic* processes that can lead to evolutionary change, what are at least two possible processes that could be operating in the experiment?
+
+This video provides an excellent introduction to the paper we will be covering in class 
+
+
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/rdZOwyDbyL0?feature=player_detailpage&end=599" frameborder="0" allowfullscreen></iframe>
+
+After you have viewed the video, take a look at the  paper we will be discussing in class. `r citep ("10.1126/science.1209566")`.  When you have, reconsider your answers to the two questions above.  What data are described in the paper that are *not* introduced in the video?
+
+We will return to the second half of the video later in the semester, but if you are interested, feel free to [go to Youtube](https://youtu.be/rdZOwyDbyL0?list=PLI1XjFOSo4gNjRqxxl-eC-H1MyHeO_dUw) and what the entire film.  It is quite good.
+
+### Bibliography
+
+```{r,echo=FALSE,message=FALSE}
+
+write.bibtex(file="Anole1.bib")
+```

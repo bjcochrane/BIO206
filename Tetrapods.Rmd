@@ -1,0 +1,29 @@
+---
+title: <center>Sea to Land</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+---
+
+### Introduction
+
+This is the first of several videos from the "Biointeractive" Series of the Howard Hughes Medical Institute.  These are typically 15-20 minutes long and address a particular question in evolutionary biology.  You will be able to watch the embedded versions of the link within Canvas; if you wish to see it full screen or in Youtube, you can click on the links at the bottom.  In each case, there you will be given some questions to think about as you watch the videos (and in some cases, you will need to enter an online response),  These questions will form the basis for subsequent classroom and exam questions.
+
+Note also that these videos supplement but **do not replace** text or class material.  Textbook references will be provided at the end of each exercise
+
+### The origin of tetrapods
+
+There are a lot of four-limbed creatures - mammals, reptiles, birds, amphibians, you name it.  A few are aquatic or marine, but most are land-based. This is clearly a very successful adaptation, but how did it occur.  Furthermore, do this wide diversity of taxa have a common evolutionary origin?  In this video, Neil Shubin, a paleontologist addresses this question and describes 
+So how did this initial adaptation take place?  We've all seen cartoons of fish flopping onto land and 
+
+1.  **Focusing on limb structure, what is the evidence that all tetrapods have a common ancestor (that is, that they are monophyletic)?**
+1.  **Based on what you have seen in the video, are the wings of bats homologous?**  Be sure you are certain about the definition of "homology" before answering - look it up in the text if necessary.
+2.  **In your own words, describe what conditions must apply in order for a fossil from a particular evolutionary transition to be located?**
+3.  **Is Tiktaalik the common ancestor of all tetrapods?  Justify your answer**?
+4.  **Two necessary adaptations for moving from sea to land are possession o limbs and a pulmonary system.  What does the evidence suggest regarding the status of these adaptations in *Tiktaalik*?  How strong is the evidence for each?  Justify your answer.**
+
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/zK8XGEDcTfo" frameborder="0" allowfullscreen></iframe>
+
+### Text References
