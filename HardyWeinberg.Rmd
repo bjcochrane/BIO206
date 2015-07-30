@@ -1,0 +1,37 @@
+---
+title: <center>The Basics of Genes in Populations</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+---
+
+### Introduction
+
+Before we can start asking meaningful questions about the genetics of the evolutionary process, we need to cover some basics - how do we measure variation in populations and what do we predict its fate to be?  We will be covering both of these topics in some detail in class and in Chapter 6 of; what follows is much of the same material, presented by Dr. Mohammed Noor of Duke University.  You will have an online assignment that will allow you to assess your comprehension of the material.
+
+### Allele and Genotype Frequencies
+
+In what follows, Dr. Noor walks you through the basic calculations of allele and genotype frequencies. In it, he focuses on a hypothetical gene "A" with two alleles - "A" and "a" A few things to remember as you watch this:
+
+1.  **In diploid organisms, the genotype of an individual consists of two alleles, so in our case a given individual could be AA, Aa, or aa.**  
+3.  **In order to determine allele frequencies directly, we must be able to determine the complete genotype of every individual in our sample.**  
+2.  **Frequencies, be they of alleles or genotypes, must add up to one.**  
+4.  **The expected frequencies of genotypes, based on random union of gametes, can be predicted based on allele frequencies in the population.**  
+
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/E0GPHSWXHUI?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+### Hardy-Weinberg and the Fate of Variation
+
+Now we come to the essential evolutionary question - what is the fate of variation in a population?  After all, one definition of evolutionary change is a change in allele frequency in a population.  In the previous video, you may have been left with the idea that in a random mating population, allele frequencies don't change.  In the next video, Dr. Noor explores this further.  As you view it, pay particular attention to the following questions:
+
+1. **What is the Hardy-Weinberg Equilibrium?**  
+3.  **Why can't you calculate actual genotype frequencies from allele frequencies?**  
+2  **What are its assumptions (or conditions) must be met for HW to be met?**  
+3.  **What is the expectation with respect to allele frequency changes in an equilibrium population?**  
+4.  **Why does any of this matter?**
+5.  **At about 10 minutes into the video, Dr. Noor asks you to do a problem.  Pause the video and work through it to the best of your ability, then continue the video to see if you got it correctly.**  
+6.  **Why is Hardy-Weinberg reasoning not circular?**    
+
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/hwhpTOGCD1U?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
