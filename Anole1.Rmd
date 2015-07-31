@@ -30,7 +30,7 @@ By clicking on the video below, you will be able to see part 1, which serves as 
 This video provides an excellent introduction to the paper we will be covering in class 
 
 
-<iframe width="100%" height="320" src="https://www.youtube.com/embed/rdZOwyDbyL0?feature=player_detailpage&end=599" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/rdZOwyDbyL0?feature=oembed&end=599" frameborder="0" allowfullscreen></iframe>
 
 After you have viewed the video, take a look at the  paper we will be discussing in class. `r citep ("10.1126/science.1209566")`.  When you have, reconsider your answers to the two questions above.  What data are described in the paper that are *not* introduced in the video?
 
