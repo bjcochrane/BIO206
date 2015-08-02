@@ -54,5 +54,8 @@ par(mfrow=c(2,2))
 lapply(dat.spl,function (x) plot(x[,5],x[,6],main=x$Site[1]))
 ```
 Very nice.  Now we need to get the slopes and all of that, and do the conversion to age.  But enough for now/
+<<<<<<< HEAD
 
 Something like z=lm(y~x) followed by extracting z$coefficients[2].  Also need to plotx
+=======
+>>>>>>> 2ece40a7838831fadec13eb034362b17ca565102
