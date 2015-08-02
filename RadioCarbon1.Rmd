@@ -51,7 +51,9 @@ dat.spl <-split(dat,dat$Site)
 OK.  Now we have four lists.  We should be able to lapply to get a plot
 ```{r}
 par(mfrow=c(2,2))
-lapply(dat.spl,function (x) plot(x[,5],x[,6],main=x$Site[1]))
+lapply(dat.spl,function (x){ plot(x[,5],x[,6],main=x$Site[1])
+  abline(lm(x[,6]~x[,5]),col="red")
+})
 ```
 Very nice.  Now we need to get the slopes and all of that, and do the conversion to age.  But enough for now/
 <<<<<<< HEAD
