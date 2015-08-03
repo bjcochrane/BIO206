@@ -1,0 +1,80 @@
+---
+title: "Class Schedule"
+author: "Bruce Cochrane"
+date: "August 3, 2015"
+output: html_document
+---
+
+###  Introduction
+
+#### Classes
+
+1. (8/24) Organization and overview - Whales?
+2.  (8/26)The historical Record.  
+3.  (8/28)  Conception/misconception discussion
+
+#### Reading
+
+Chapters 1 & 2
+Padian
+
+### The Physical Record
+
+1.  (8/31)Chemistry and Physics
+2.  (9/2) Overview of geological history
+3.  (9/4) Reading a paper or somesuch (if not, perhaps taxonomy workshop)
+
+#### Reading
+
+Chapter 3
+Radiometric dating
+
+### Inferring Phylogenies
+
+1.  (9/9)
+2.  (9/11)
+3.  (9/14)
+4.  (9/16)  EXAM
+
+#### Reading
+
+Chapter 4 
+
+### Evolutionary Genetics
+
+1. (9/18) The Background
+2.  (9/21)  HW Essentials
+3.  (9/23)  Stochastic Processes
+4.  (9/25)  Selection
+5.  (9/28)  Quantitative Genetics
+6.  (9/30)  Some Examples
+
+#### Reading and Online
+
+Chapters 5-7; some of 8
+Noor videos
+
+#### Assignments
+
+Hardy Weinberg Problems
+
+### Case Studies in Evolution
+
+### Molecular and Developmental Evolution
+
+1.  The basics
+2.  Some fun things we've learned
+3.  Molecules and Selection
+
+### Sex and Sexual Selection
+
+
+### Speciation and Macroevolution
+
+### Coevolution and Behavior
+
+### Human Evolution
+
+
+
+
