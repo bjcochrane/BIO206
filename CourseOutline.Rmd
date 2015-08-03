@@ -60,6 +60,7 @@ Hardy Weinberg Problems
 
 ### Case Studies in Evolution
 
+<<<<<<< HEAD
 ### Molecular and Developmental Evolution
 
 1.  The basics
@@ -77,4 +78,6 @@ Hardy Weinberg Problems
 
 
 
+=======
+>>>>>>> 695eae45a5b657b90b23868ffa22168923a53b06
 
