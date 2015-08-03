@@ -51,13 +51,25 @@ dat.spl <-split(dat,dat$Site)
 OK.  Now we have four lists.  We should be able to lapply to get a plot
 ```{r}
 par(mfrow=c(2,2))
-lapply(dat.spl,function (x){ plot(x[,5],x[,6],main=x$Site[1])
-  abline(lm(x[,6]~x[,5]),col="red")
-})
+rg.aln <-lapply(dat.spl,function (x){ plot(x[,5],x[,6],main=x$Site[1],xlab = "Rb87/Sr86",ylab="Sr87/Sr86")
+  reg <-lm(x[,6]~x[,5])
+  abline(reg,col="red")
+    reg$coefficients[2]
+  })
 ```
+
+Now write an age function and make a table
+
+```{r}
+lmb <-48.8*10^9
+```
+
+To be incorporated into the above.  A little test code first.
+
+
 Very nice.  Now we need to get the slopes and all of that, and do the conversion to age.  But enough for now/
-<<<<<<< HEAD
+
 
 Something like z=lm(y~x) followed by extracting z$coefficients[2].  Also need to plotx
 =======
->>>>>>> 2ece40a7838831fadec13eb034362b17ca565102
+
