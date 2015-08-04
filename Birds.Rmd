@@ -1,0 +1,38 @@
+---
+title: <center>Birds and Dinosaurs</center>
+author: <center>Bruce Cochrane</center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+
+---
+### Introduction
+
+The idea that birds and dinosaurs are related has been with us for a long time.  However, more recently birds are increasingly referred to as "avian dinosaurs".  That is, rather than simply being *related* to dinosaurs thay actually *are* dinosaurs.  The video below describes some of the evidence that this is the case.  Watch the video, and then consider the questions that follow.
+
+### The Video
+
+<p><iframe src="https://www.youtube.com/embed/z4nuWLd2ivc" width="100%" height="320" allowfullscreen="allowfullscreen"></iframe></p>
+
+### Questions
+
+1.  Suppose you knew nothing about the origins of birds.  What characters might you select to define the group.
+2.  What aspects of modern birds might suggest a relationship with reptiles?
+3.  Think back to what we've learned about tetrapods.  What evidence is presented in the film that suggests that birds are in fact tetrapods.
+4. Consider Archaeopteryx and pterosaurs.  Describe the  evidence suggesting that they evolved flight independently.
+5.  Based on the film, propose a tree that relates modern birds, archaeopteryx, pterosaurs, and  dinosaurs (specifically theropods).
+6.  Does the evidence suggest that feathers evolved for flight?  If not, then for what?
+
+
+The following table lists a number of alternative characters.  Based on it
+
+1.  Circle the characters that are possessed by modern birds
+2.  What evidence is there that each of ththe characteristics you circled  did not evolve in a simple linear sequence?
+
+---|---
+No teeth|Teeth
+No claws|Claws
+Separate(nonfused) fingers| Fused fingers
+Short bony tail | Long bony tail
+Flat Sternum | Deep keeled sternum
