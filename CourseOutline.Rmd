@@ -18,6 +18,11 @@ output: html_document
 Chapters 1 & 2
 Padian
 
+#### Online
+
+Darwin and Wallace
+Correct the statement assignment
+
 ### The Physical Record
 
 1.  (8/31)Chemistry and Physics
@@ -29,16 +34,25 @@ Padian
 Chapter 3
 Radiometric dating
 
-### Inferring Phylogenies
+#### Online
 
-1.  (9/9)
-2.  (9/11)
-3.  (9/14)
+Dating California
+
+### Common Descent and Phylogenies
+
+1.  (9/9) Intro - characters; using fossils
+2.  (9/11) Trees and the carnivore example
+3.  (9/14)  Class exercise; review
 4.  (9/16)  EXAM
 
 #### Reading
 
 Chapter 4 
+
+#### Online
+
+Tetrapods and Titkaalik
+The Origin of Birds
 
 ### Evolutionary Genetics
 
@@ -47,11 +61,14 @@ Chapter 4
 3.  (9/23)  Stochastic Processes
 4.  (9/25)  Selection
 5.  (9/28)  Quantitative Genetics
-6.  (9/30)  Some Examples
 
-#### Reading and Online
+
+#### Reading 
 
 Chapters 5-7; some of 8
+
+#### Online
+
 Noor videos
 
 #### Assignments
@@ -60,24 +77,56 @@ Hardy Weinberg Problems
 
 ### Case Studies in Evolution
 
-<<<<<<< HEAD
+1.  What we need to show (1-2 examples)
+2.  Followup on examples?
+
+#### Online
+
+1.  Anoles
+2.  Sticklebacks
+3.  Mice
+
 ### Molecular and Developmental Evolution
 
 1.  The basics
 2.  Some fun things we've learned
 3.  Molecules and Selection
-
+4.  Devo I
+5.  Devo II
 ### Sex and Sexual Selection
 
+1.  Why Sex
+2.  Sexual Selection - The behaviors
+3.  Sexual selection - physiology
+
+#### Online
+
+Vrijenhoek - importance of sex
+PBS - Sexual selection
 
 ### Speciation and Macroevolution
 
+1.  Species overview
+2.  Problem cases - sympatric and microbes
+3.  Macroevolution
+4.  Extinction
+
+#### Online
+
+Birth and death of species
+Anoles II.
+
 ### Coevolution and Behavior
 
+1.  Patterns of Coevolution
+2.  
 ### Human Evolution
 
+1.  The big picture
+2.  The genus Homo
+3.  Modern evolution
 
 
-=======
->>>>>>> 695eae45a5b657b90b23868ffa22168923a53b06
+
+
 
