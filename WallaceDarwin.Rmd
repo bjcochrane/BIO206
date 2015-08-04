@@ -34,10 +34,8 @@ Dr. Carroll's description of the parallel explorations of Darwin and Wallace is 
 3.  The third is Wallace's contribution, entitled *On the Tendency of Varieties to depart indefinitely from the Original Type*.
 
 Thus, while it is certainly true that they released their findings jointly, they did so in a way that separated their contributions from one another.
-<<<<<<< HEAD
 
-=======
->>>>>>> 7e15aefffd7269fe204e6d4fad71f0debf9fddfd
+
 ### Text References
 
 ### Other references
