@@ -1,0 +1,26 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+This week we will take our first look at the fossil record, the physical evidence we have available to us regarding the history of life.  First, we will take a bit of a detour, examining briefly what geology can tell us, focusing particularly on dating methods..  Then, we will spend some time going over what we know about the history of life
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1|August 31|Geological Processes and Dating 
+2|September 2|Biomarkers; History of Life 1
+3|September 4|History of Life 2-4
+
+### Preparation
+
+Date|Required|Supporting
+---|---|---
+8/31|Chapter 2, pp. 51-76|Introduction to Radiological Dating
+9/2|Chapter 2, pp. 36-83

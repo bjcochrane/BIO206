@@ -1,0 +1,34 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+So why do biologists constantly refer to Charles Darwin?  In this module, we will address that point, framing everything that follows in the course by carefully examining the key elements of Darwinian Theory.  In so doing, we will consider the following:
+
+1.  The state of biological knowledge prior to Darwin
+2.  The career of Darwin
+3.  The logical development of *The Origin of Species*
+4.  The two pillars of evolutionary theory
+5.  Correct and incorrect intpretations and applications of evolutionary theory
+
+### Class Topics
+
+Class number|Date|Topic
+---|---|---
+1.|August 24|Introduction to the Course
+2.|August 26|The Development of Evolutionary Theory
+3.|August 28|(Discussion) - Conceptions and Misconceptions
+
+### Preparation
+
+Date|Required
+---|---
+8/24|Chapter 1 pp. 5-16; 22-24
+8/26|Chapter 2; The Origins of Evolutionary Theory
+8/28|Padian (see below)
+
