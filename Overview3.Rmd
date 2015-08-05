@@ -1,0 +1,33 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+Now we get to the guts of one of the pillars of Darwinian evolution, the concept of common descent (what he called descent with modification).  In the broadest sense, we are asking, given the hypothesis that all species share a common ancestor, how we can use data from both fossils and existing species to infer evolutionary (or phylogenetic) relationships.  There are three aspects we will address:
+
+1.  How do we read phylogenetic trees?
+2.  How are they constructed in the first place?
+3.  How can we use phylogenetic analysis to better understand character evolution?
+
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|September 9 |Introduction to Phylogenies
+2.|September 11 |Shared derived characters and Phylogenetic Reconstruction
+3.|September 14 |Building a phylogeny (in class assignment)
+4|September 16|Examples - Tetrapods, Dinosaurs and Birds; Review for Exam
+
+### Preparation
+
+Date|Required
+---|---
+9/9|Chapter 4 pp 95-100
+9/11|Chapter 4 pp. 100--108
+9/16|Chapter 4 pp. 108-122; Origin of Tetrapods; Birds and Dinosaurs
