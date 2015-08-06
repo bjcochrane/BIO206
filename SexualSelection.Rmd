@@ -1,0 +1,14 @@
+---
+title: <center>Sexual Selection</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+Cool video on male praying mantises removing the sperm of previous males.
+
+<iframe width="500" height="390" src="https://www.youtube.com/embed/-ekvw7YwhIA" frameborder="0" allowfullscreen></iframe>
