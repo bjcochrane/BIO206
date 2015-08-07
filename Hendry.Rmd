@@ -1,0 +1,16 @@
+---
+title: <center></center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+---
+
+
+Below is a link to an excellent paper, published in 2011, that covers much of the material in this unit.  It is fairly long, but as you prepare for the second midterm exam (and for the final) you should look through this paper. focus on what it says about the following questions and relate it back to what we've covered.  **Do not simply quote or paraphrase the paper.** Rather, you should be able to bring in ideas, arguments and examples from other sources.
+
+1. Why do "phenotypes matter"?
+2.  
+3.
+

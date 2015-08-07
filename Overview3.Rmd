@@ -22,7 +22,7 @@ Class|Date|Topic
 1.|September 9 |Introduction to Phylogenies
 2.|September 11 |Shared derived characters and Phylogenetic Reconstruction
 3.|September 14 |Building a phylogeny (in class assignment)
-4|September 16|Examples - Tetrapods, Dinosaurs and Birds; Review for Exam
+4.|September 16|Examples - Tetrapods, Dinosaurs and Birds; Review for Exam
 
 ### Preparation
 
