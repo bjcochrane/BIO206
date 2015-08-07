@@ -1,0 +1,24 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+So now that we've covered (at least in theory) the genetic basis for evolutionary change, we need to ask whether in fact the hypotheses we've generated can be tested, either in nature or in the laboratory.  In this module, we will spend a small amount of class time (two periods) looking at some examples, both from Chapter 8 and elsewhere.  In addition, the assignment associated with the module will require you to select one of a few examples and explore it in greater depth.
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|October 2|Part 1
+2.|October 5|Part 2
+
+### Preparation
+
+Date|Required
+---|---
+10/2|Ch. 8 pp. 231-248

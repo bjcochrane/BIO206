@@ -1,0 +1,32 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+In this module, we are going to think about evolutionary biology in terms of gene structure and function.  First, we will examine the general subject of "molecular evolution" - the use of molecules as characters in phylogenetic reconstruction and the methods whereby the effects of selection can be detected at the level of DNA or protein sequence.  Then, we will turn our attention to gene function, focusing primarily on genes that control developmental processes, and ask what we can learn from them about morphological evolution.
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|October 12|The Basics of Molecular Evolution
+2.|October 14|Molecular clocks and molecular phylogeny
+3.|October 16|Detecting selection at the molecular level
+4.|October 19|History and homeotic mutations
+5.|October 21|Beyond Flies
+6.|October 23|Other Aspects of molecular adaptations
+
+### Preparation
+
+Date|Required
+---|---
+9/12|Ch. 9 pp 267-274
+9/14|Ch. 9 pp. 285-296
+9/16|Ch. 8 pp. 248-251;  Milk and Humans
+10/19|Ch. 10 pp. 303-10; 317-319; Discovering the Homeo Box
+10/21|Ch. 10 remainder
