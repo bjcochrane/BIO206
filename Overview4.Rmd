@@ -1,0 +1,37 @@
+---
+title: <center>Evolutionary Genetics</center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+This is the longest module in the course and for many students the most difficult.  However, it is, in many ways the most important, in that all aspects of the evolutionary process - be it natural selection, speciation or whatever - ultimately are based on genetic changes, and more specifically **genetic changes in populations**.  Our approach to this will be as follows:
+
+1.  We will go over some basic Mendelian and molecular genetics.  This will be review for many of you, but it will help to get everyone on the same page.
+2.  We will look at the relationship between allele and genotype frequencies and define the concept of an equilibrium population.
+3.  We will then look at the genetic changes that can occur *in the absence of natural selection* (a concept missing from Darwin and Wallace's initial work).
+4.  Building on that, we will examine some basic theory about natural selection and think about how it interacts with random ones.
+5.  Finally (and in some ways most importantly) we will look at what we can learn about the genetics of complex traits, those that we most frequently think of as being shaped by natural selection.
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|September 21|Basic Genetics
+2.|September 23|The Hardy-Weinberg Equilibrium
+3.|September 25|Random Forces in Evolution
+4.|September 28|Natural Selection Theory
+5.|September 30|Genetics of Complex Traits
+
+### Preparation
+
+Date|Required
+---|---
+9/21|Ch  5 pp
+9/23|Ch. 6 pp.159-162; Noor Videos
+9/25|Ch. 6 pp. 165-172
+9/28|Ch. 6 pp. 172-186
+9/30|Ch. 5 pp. 145-154; Ch 7
