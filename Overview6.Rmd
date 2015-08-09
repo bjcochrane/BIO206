@@ -10,6 +10,22 @@ output:
 
 In this module, we are going to think about evolutionary biology in terms of gene structure and function.  First, we will examine the general subject of "molecular evolution" - the use of molecules as characters in phylogenetic reconstruction and the methods whereby the effects of selection can be detected at the level of DNA or protein sequence.  Then, we will turn our attention to gene function, focusing primarily on genes that control developmental processes, and ask what we can learn from them about morphological evolution.
 
+So in thinking about the material, it may be helpful to think of in two parts.  In the first, we use the *structure* of genes to make inferences about both common descent and evolutionary change (both selection and mutation/drift).  In the second, we ask how what we know about the molecular genetics of the evolutionary process can explain observed patterns of morphological evolution.  In doing this, we will address the following points:
+
+#### Part 1
+
+1.  We can use allelic sequence variation to construct within-species gene trees.
+2.  Similar data can be used to infer species phylogenies, but within-species variation must be accounted for.
+3.  The neutral model of evolution forms the basis for the "molecular clock" and can be used as a null hypothesis to test for the action of natural selection.
+4.  Patterns of sequence variation, notably of haplotype variation and the relationship between sysnonymous and nonsynonymous substitutions, can be used to infer the occurrence of natural selection.
+
+#### Part 2
+
+1.  Morphological variation among species is established during the developmental process.
+2.  Studies of model organisms (notably *Drosophila melanogaster*) have shown that, in metazoans, much morphological variation among species can be explained by differences in timing and expression of a common small set of genes (the "developmental toolkit")
+3.  Combining phylogenetic with molecular analysis, it has been possible to develop strong hypotheses about the evolutionary history of particular phenotypes (for example eyes and snake venom).
+4.  The control of flowering in plants is analagous to that of segmentation in metazoans, but the genetic toolkit for plants evolved independently.
+
 ### Class Topics
 
 Class|Date|Topic
