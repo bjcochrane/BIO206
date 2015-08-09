@@ -1,0 +1,46 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+As was the case with the last module, in this one we will be doing with two related concepts.
+
+#### Why sex?
+
+It is certainly true that, if we include the microbes, the vast majority of species do not reproduce sexually (at least not in the way we think of it).  Nevertheless, we will see that sexual reproduction has evolved multiple times, and sexually reproducing species have been quite successful.  This is the case, in spite of the fact that there are obvious costs to sexual reproduction.  Thus we will consider:
+
+1.  What are the costs of sexual reproduction?  
+2.  What are the advantages?
+
+By the time we have completed the module, you should be able to answer these questions in considerable detail.
+
+#### What are the consequences of sexual reproduction?
+
+So given a typical male-female reproductive system, we will see that the process of *sexual selection* leads to an overarching concept - **males compete and females choose**.  We can break that down further:
+
+1.  What is anisogamy and how does it predict this consequences?
+2.  What are some of the mechanisms that have evolved that reflect it?
+3.  What happens when sex roles are reversed?
+4.  What happens after mating and prior to fertilization?
+5.  Can sexual selection be antagonistic with respect to fitness consequences for males and females? 
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|October 26|Why Sex?
+2.|October 28|Sexual Selection I
+3.|October 30|Sexual Selection II
+
+### Preparation
+
+Date|Required
+---|---
+10/26|Chapter 11, pp. 345-351; "Why Sex?  The Red Queen"
+10/28|Chapter 11, pp. 352-370; "Sexual Selection - Why Peakocks"
+10/30|Chapter 11, pp. 370-372; "Sexual Selection in the Pipefish"
