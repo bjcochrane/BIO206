@@ -42,5 +42,5 @@ Class|Date|Topic
 Date|Required
 ---|---
 10/26|Chapter 11, pp. 345-351; "Why Sex?  The Red Queen"
-10/28|Chapter 11, pp. 352-370; "Sexual Selection - Why Peakocks"
+10/28|Chapter 11, pp. 352-370; "Sexual Selection - Why Peacocks"
 10/30|Chapter 11, pp. 370-372; "Sexual Selection in the Pipefish"
