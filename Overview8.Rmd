@@ -1,0 +1,52 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+
+
+### Overview and Objectives
+
+So we all know that Darwin's masterpiece was entitled *On the Origin of Species*, right?  But what is a species?  is there something unique about species that set them apart from other phylogenetic groupings (genera, families, phyla, etc)?  It turns out that these are tough questions to address, and indeed they continue to be active areas of scientific investigation and controversy.  Once again, we will approach these questions from two perspectives.
+
+#### Speciation
+
+We will start by looking at three models of speciation - morphological, phylogenetic and  biological.  As we do so, we will consider the following:
+
+1.  Most speciation models involve some form of phylogenetic lineage sorting.
+2.  The biological species concept, developed in the context of sexual species, adds the component of reproductive isolation.
+3.  In cases where geographic isolation is part of the speciation process, we can envision the process occurring, however
+4.  In cases where either a) those barriers don't exist, or b) regular sexual reproduction occurs, then defining species and inferring speciation processes becomes more problematic.
+
+#### Macroevolution
+
+Here we look at evolution at the level of the species and above.  Some of the considerations we will address are
+
+1.  How can we model the number of taxa over time - under what conditions do they increase, decrease or remain at a steady state?
+2.  Are discontinuities in the fossil record (sudden appearance and/or disappearance of taxa) artifacts of the incompleteness of that record, or do they in fact reflect evolutionary processes?
+2.  How can we explain the geographic distribution of taxa, based on both inferred phylogenetic relationships and what we know about the physical history of the earth?
+4.  What about extinction?
+
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|November 2|Speciation I - How do we define species?
+2.|November 4|Speciation II - The tough cases - Speciation with Gene Flow; Hybridization; The Microbial World
+3.|November 6|Macroevolution I - Birth and death of species and taxa
+4.|November 9|Macroevolution II - Punctuated Equilibrium Theory; Biogeography
+5.|November 11|Extinction
+
+### Preparation
+
+Date|Required
+---|---
+11/2|Chapter 13 pp. 414-423
+11/4|Chapter 13 pp. 424-439
+11/6|Chapter 14 pp. 464-474; 
+11/9|The Birth and Death of Species
+11/11|Chapter 14 pp. 474-480; Tales of Two Extinctions
