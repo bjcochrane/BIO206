@@ -1,0 +1,26 @@
+---
+title: <center></center>
+author: <center></center>
+date: Updated `r format(Sys.Date(),format="%B %d %Y")`
+output: 
+    html_document:
+       css: Overview.css
+---
+### Overview and Objectives
+
+### Class Topics
+
+Class|Date|Topic
+---|---|---
+1.|November 16|Coevolution I - The Red Queen Returns
+2.|November 18|Coevolution II - Some examples.
+3.|November 20|Behavior I - why relatives matter
+4.|November 23|Behavior II- Do relatives ever not matter?
+
+### Preparation
+
+Date|Required
+---|---
+11/16|xxx
+11/18|xxx
+11/20|xxx
