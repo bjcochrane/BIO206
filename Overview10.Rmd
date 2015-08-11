@@ -32,6 +32,6 @@ Class|Date|Topic
 
 Date|Required
 ---|---
-11/30|Chapter 17 pp. 573-585
-12/2|Chapter 17 pp. 588-596
+11/30|Chapter 17 pp. 573-585; *Ardipithecus ramidus*
+12/2|Chapter 17 pp. 588-596; Svante Paabo on Human Origins
 12/4|Chapter 17 pp. 604-609; selected topics from Chapter 18
