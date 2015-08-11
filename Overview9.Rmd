@@ -8,6 +8,23 @@ output:
 ---
 ### Overview and Objectives
 
+This module focuses on the evolution of interactions - either among species in the case of coevolution or between individuals within species in the case of behaviors.
+
+#### Coevolution
+
+We have touched on this in the past - notably in our consideration of the Red Queen Hypothesis as an explanation for the evolution of sexual reproduction and recombination.  We will return to that as we consider that
+
+1.  Coevolution affects all species and can be very complex, involving multiple species and multiple types of interactions.
+2.  Coevolutionary relationships can be antagonistic, mutualistic, commensal, or some combination (mosaic).
+3.  In many cases, especially ones involving microbes and their hosts, the distinction between host and parasite rapidly becomes blurred.
+
+#### Behavior
+
+Behavioral evolution is a discipline unto itself, and we will only deal with a few aspects of it in this class (for example, we will *not* cover the material on brain evolution that is in the text.  What we will focus on is cooperative behavior - those examples where, on first glance at least, it appears that indivudals sacrifice their own fitness for the sake of others of their species (a problem that bothered Darwin greatly).  We will consider
+
+1.  The role of kinship in the evolution of cooperative behavior
+2.  The question of altruism and group fitness - do such things really exist?
+
 ### Class Topics
 
 Class|Date|Topic
@@ -21,6 +38,7 @@ Class|Date|Topic
 
 Date|Required
 ---|---
-11/16|xxx
-11/18|xxx
-11/20|xxx
+11/16|Chapter 15; Leaf Cutter Ants
+11/18|Chapter 15, cont'd; Wollbachia and the Arthropods
+11/20|Chapter 16 pp. 531-541; 557-562
+11/23|Chapter 16 pp. 553-557; Leaf Cutter Ants
