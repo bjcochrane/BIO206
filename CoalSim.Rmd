@@ -1,0 +1,21 @@
+---
+title: <center>Coalescent Simulation</center>
+author: <center>Bruce Cochrane</center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+Try to get simple coalescent plot - say 15 individuals.
+
+```{r}
+library(evobiR)
+```
+
+```{r}
+CoalSim(10)
+```
+Not particularly useful.
