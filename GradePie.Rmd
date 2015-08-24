@@ -14,7 +14,7 @@ dat.names=c("Midterms","Final","Module Assignments","Clickers")
 ```
 
 ```{r}
-pie(dat,labels=dat.names,col = c("purple", "violetred1", "green3","cornsilk"))
+pie(dat,labels=dat.names,col = c("purple", "violetred1", "green3","cornsilk"),cex=.8)
 ```
 
 
