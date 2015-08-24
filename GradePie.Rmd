@@ -1,0 +1,20 @@
+---
+title: <center>Grade Pie Chart</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+```{r}
+dat <-c(45,20,20,15)
+dat.names=c("Midterms","Final","Module Assignments","Clickers")
+```
+
+```{r}
+pie(dat,labels=dat.names,col = c("purple", "violetred1", "green3","cornsilk"))
+```
+
+
