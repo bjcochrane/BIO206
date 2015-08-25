@@ -1,0 +1,46 @@
+---
+title: <center>Cats and Drugs</center>
+author: <center>Bruce Cochrane</center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+```{r}
+library(knitcitations)
+```
+
+So this is a fascinating topic.  `r citet("10.1371/journal.pone.0018046")` have investigated the evolution of drug sensitivity in cats and other carnivores.  What they report is that in the felids, UDP Gluconysyltransferase 1A6 has been inactivated, due to various structural mutations, and they suggest that this is diet-related evolution.  They also examined another gene family member, 1A1, and they find no similar pattern. Furthermore, dNdS numbers in the former approach neutrality; they do not in the latter (which metabolizes bilirubin).  
+
+### Popset Links
+
+[1A1](http://www.ncbi.nlm.nih.gov/popset/149393408)
+[1A6](http://www.ncbi.nlm.nih.gov/popset/154126225)
+
+### 1A1
+
+So we can do a quickie analysis here.
+```{r}
+acc.1a1 <-read.table("./Data/catUDP1A1.txt")
+dat.1a1 <-read.GenBank(acc.1a1[,1])
+dat.1a1
+```
+```{r}
+a1a.aln <-muscle(dat.1a1)
+image.DNAbin(a1a.aln)
+```
+Trim off the ends
+```{r}
+a1a.aln <-a1a.aln[,180:530]
+a1a.aln
+```
+Rename
+```{r}
+row.names(a1a.aln) <-attr(dat.1a1,"species")
+
+```
+Still need to figure a way to get common names.
+eol api:  640ea5ba807d952f4e72b680246624875ebe17bb
