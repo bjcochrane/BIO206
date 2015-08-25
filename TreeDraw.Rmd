@@ -1,0 +1,111 @@
+---
+title: <center>Some Tree Building</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%%B %%d %%Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+### Background
+
+For the moment, this is just a scratch file, but we're going to see if we can use stuff from summer to make trees complete with the Geo time scale.
+
+```{r}
+library (strap)
+```
+
+Basic code is something like
+
+geoscalePhylo(tree=ladderize(file.tree,right=FALSE),label.offset=0,cex.age=.6,cex.ts=.6,cex.tip=.6)
+
+Where file.tree is a phylo object.  Note also that tree.file$root.time  may also have to be set with max(dist.nodes(tree.file))
+
+So where to get the trees?  Probably start with treebase
+
+```{r}
+library(treebase)
+```
+Let's try a simple query
+```{r}
+humans <-search_treebase("Homo",by="taxon")
+```
+In actuality, it might make sense to do the search on the web and then select specific one to download.  Ok< I have one for Carnivores (StudyID =Tr3367)
+```{r}
+car.tree <-read.nexus("./Data/Carnivora.nex")
+```
+```{r}
+plot(car.tree)
+```
+OK.  It works out pretty nicely, but it doesn't look to have branch lengths.  Let's explore
+```{r}
+str(car.tree)
+```
+Nope.  No dates.  But we can explore one thing.  So the taxa are
+```{r}
+car.tree$tip.label
+```
+So I wonder if we can get a list of common names from that
+```{r}
+library(taxize)
+```
+```{r}
+car.nm <-sci2comm(car.tree$tip.label,simplify = TRUE)
+```
+Returns a list, with lots of synonyms for each one.  Adding simplify=FALSE gives more information, but there's no real way to simplify things.
+
+Back to taxize.  There's a study, S1663, of placental mammals
+```{r}
+mammals <-search_treebase("S1663",by="id.study")
+```
+```{r}
+str(mammals)
+```
+So that returned three trees, all way too big for practical use.  but we could walk through the code anyway, just to see if calibration works.  Pick the first one
+
+```{r}
+mammal1 <-mammals[[1]]
+```
+```{r}
+mammal1$root.time <-max(dist.nodes(mammal1))
+mammal1$root.time
+```
+Hmm.
+
+Go back to downloaded file
+```{r}
+cats <-read.nexus("./Data/Felid.nex")
+plot(cats)
+```
+Lotsof multichotomies.  Not good.
+
+Found another source - lots and lots of dated trees - reference to follow.  From Europe.
+```{r}
+emam <- read.tree("./Data/EMammals.txt")
+```
+Ok.  it's way to large.  However, We should be able to do the manipulations:
+```{r}
+emam$root.time <-max(dist.nodes(emam))
+emam$root.time
+```
+Looks quite good.  Now to do the stuff
+```{r}
+geoscalePhylo(tree=ladderize(emam,right=FALSE),label.offset=0,cex.age=.6,cex.ts=.6,cex.tip=.2,units="Period")
+```
+OK.  So now we get to the pruning piece.  First, list the taxa
+```{r}
+emam$tip.label
+```
+```{r}
+test <-read.tree("./Data/newick.txt")
+plot(test)
+```
+OK.  So the trick is to get the topology correct in the Newick file and then add the numbers.
+
+```{r}
+test$root.time <-max(dist.nodes(test))
+geoscalePhylo(tree=ladderize(test,right=FALSE),label.offset=0,cex.age=.6,cex.ts=.6,cex.tip=.8,units="Period")
+```
+
