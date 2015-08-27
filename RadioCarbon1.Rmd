@@ -8,6 +8,7 @@ output:
        toc: yes
        toc_depth: 5
 ---
+
 ```{r,echo=FALSE,message=FALSE}
 library(rmarkdown)
 library(knitr)
@@ -25,7 +26,8 @@ We've found a skull, positioned between two volcanic layers.  Those layers consi
 t5 <-700*10^6
 tm <-seq(100*10^7,0,-50000000)
 u <-100*exp((-.693/t5)*tm)
-plot(tm,u,xaxt="n",xlab="Time Before Present (MY)",ylab="Amount of U235",main="Hyothetical Decay of U235 with Time",col="darkred",pch=16)
+plot(tm,u,xaxt="n",xlab="Time Before Present (MY)",ylab=expression("Amount of" ~ " "^235~U),main=expression("Hyopthetical Decay of " ~ ""^235~U ~ with ~ Time),col="darkred",pch=16)
+
 axis(1,at=seq(0,10^9,2*10^8),labels=seq(0,100,20))
 ```
 But of course, we don't have the luxury of being able to observe 100,000 years of decay as it occurs; rather what we need to do is to use a few replicated measures from the present to extapolate backwards in time and infer the age of the rock. How can we do that, especially given that we don't know how much of the radioactive isotope was present in our samples to begin with?
@@ -39,9 +41,9 @@ The basic approach for doing so is described in Box 3.1 of Zimmer and Emlen (pg.
 Look at the left panel first.  It illustrates the following:
 
 1.  We have several samples of rocks from our site, all that crystallized at the same time.
-2.  At the time of formation, the total ratio of ^87^Sr, the daughter product of the decay of ^87^Rb, and ^86^Sr, a stable isotope of Strontium, is the same in all samples.  The amount of radioactive ^87^Rb varies among samples.
+2.  At the time of formation, the material that crstallized all had the same ratio of ^87^Sr, product of the radioactive decay of ^87^RB^ and ^86^Sr, both stable isotopes (although the total **amount** of Strontium varies from sample to sample).  That is shown plotted on the Y axis.  On the other hand, the different samples will have different amounts of ^87^Rb, so the ratio of that element to ^86^Sr will vary among samples (shown on the X axis above).
 
-Now look at the right panel.  As time progresses, ^87^Rb decays, so the amount of the daughter product of that decay, ^87^Sr, increases, so the ratio of the two Sr isotope increases.  Most importantly, **those samples that happened to have more Rb initially will produce more ^87^Sr, resulting in a higher ration of ^87^Sr to ^86^Sr (the amount of which remains constant over time).**
+Now concentrate on the right panel.  As time progresses, ^87^Rb decays, so the amount of the daughter product of that decay, ^87^Sr, increases, so the ratio of the two Sr isotope increases.  Most importantly, **those samples that happened to have more Rb initially will produce more ^87^Sr, resulting in a higher ratio of ^87^Sr to ^86^Sr (the amount of which remains constant over time).**
 Thus, at a given time (and we won't work through the math, plotting the two ratios as shown results in a line, with a slope of  e^&lambda;t-1^, where &lambda; is the rate of decay per year, which in the case of ^87^Rb has been determined to be 1.42 X 10^-11^.  Thus, by determining the slope of the line and dividing  its natural logarithm by &lambda;, we can get an estimate of the age.
 
 ### An Example
@@ -55,8 +57,8 @@ So the first thing we will do is to plot the isochrons for each of the four site
 ```{r,echo=FALSE}
 dat <-read.csv("./Data/CalifGeo.csv")
 dat.spl <-split(dat,dat$Site)
-par(mfrow=c(2,2))
-rg.aln <-lapply(dat.spl,function (x){ plot(x[,5],x[,6],main=x$Site[1],xlab = "Rb87/Sr86",ylab="Sr87/Sr86")
+par(mfrow=c(2,2),mai=c(1,1,.5,.5))
+rg.aln <-lapply(dat.spl,function (x){ plot(x[,5],x[,6],main=x$Site[1],xlab = expression(""^87~Rb/""^86~Sr),ylab=expression(""^87~Sr/""^86~Sr))
   reg <-lm(x[,6]~x[,5])
   abline(reg,col="red")
     reg$coefficients[2]
@@ -80,7 +82,6 @@ kable(res,row.names=FALSE)
 Based on what we have determined regarding the physical age of these particular geological strata, what would you be able to conclude about any fossils you found associated with them.  In particular
 
 1.  What geological era(s) would you expect them to be associated with?
-2.  If you were interested in reconstructing past communities, and remembering that topography changes with time, could you hypothesize that species found in all four sites might have been members of the same community?  Why or why not? (**Hint** Remember that the calcluated ages have error associated with them; consider rounding them to the nearest 10 million years before answering the question.
-
+2.  Assuming that the dates are determined within an accuracy of +/- 5 million years, how many distinct time points are represented in these four samples?
 
 For a printable copy of this document, click **<a href="https://dl.dropboxusercontent.com/u/9752688/BIO206/html/RadioCarbon1.html" target="_blank">here</a>**
