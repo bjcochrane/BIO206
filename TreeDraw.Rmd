@@ -111,13 +111,13 @@ geoscalePhylo(tree=ladderize(test,right=FALSE),label.offset=0,cex.age=.6,cex.ts=
 
 Try it wit the tetrapods (page 110)
 ```{r}
-tets <-read.tree("./Data/tetrapods.txt")
+tets <-read.tree("./Data/whales.txt")
 plot(tets)
 ```
 Basic tree works.  Now add distances.  Abd that looks good.  Now copy/paste above to plot.
 ```{r}
-tets$root.time <-420
-geoscalePhylo(tree=ladderize(tets,right=FALSE),label.offset=0,cex.age=.6,cex.ts=.6,cex.tip=.8,units="Period",boxes="Period")
+tets$root.time <-58
+geoscalePhylo(tree=ladderize(tets,right=FALSE),label.offset=0,cex.age=.8,cex.ts=.8,cex.tip=.8,unit="Epoch",erotate=45)
 ```
 
 So the deal is to manually set the root time.  Don't know why the max thing doesn't work.  But whatever.  And we can add the shading with boxe="Period"
