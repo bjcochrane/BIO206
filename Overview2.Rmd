@@ -8,7 +8,7 @@ output:
 ---
 ### Overview and Objectives
 
-This week we will take our first look at the fossil record, the physical evidence we have available to us regarding the history of life.  First, we will take a bit of a detour, examining briefly what geology can tell us, focusing particularly on dating methods..  Then, we will spend some time going over what we know about the history of life
+This week we will take our first look at the fossil record, the physical evidence we have available to us regarding the history of life.  First, we will take a bit of a detour, examining briefly what geology can tell us, focusing particularly on dating methods..  Then, we will spend some time going over what we know about the history of life.  The assignment for this module ("What happened when?") will be due on **September 11**.
 
 ### Class Topics
 
@@ -16,7 +16,7 @@ Class|Date|Topic
 ---|---|---
 1|August 31|Geological Processes and Dating 
 2|September 2|Biomarkers; History of Life 1
-3|September 4|History of Life 2-4
+3|September 4|History of Life 2
 
 ### Preparation
 
