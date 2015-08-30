@@ -24,11 +24,16 @@ We've found a skull, positioned between two volcanic layers.  Those layers consi
 
 ```{r,echo=FALSE}
 t5 <-700*10^6
-tm <-seq(100*10^7,0,-50000000)
+tm <-seq(200*10^7,0,-50000000)
 u <-100*exp((-.693/t5)*tm)
 plot(tm,u,xaxt="n",xlab="Time Before Present (MY)",ylab=expression("Amount of" ~ " "^235~U),main=expression("Hyopthetical Decay of " ~ ""^235~U ~ with ~ Time),col="darkred",pch=16)
 
-axis(1,at=seq(0,10^9,2*10^8),labels=seq(0,100,20))
+axis(1,at=seq(0,2*10^9,2*10^8),labels=seq(0,200,20))
+abline(h=50,col="blue",lwd=2)
+abline(h=25,col="darkorange",lwd=2)
+abline(v=t5,col="blue",lwd=2,lty=3)
+
+abline(v=2*t5,col="darkorange",lwd=2,lty=3)
 ```
 But of course, we don't have the luxury of being able to observe 100,000 years of decay as it occurs; rather what we need to do is to use a few replicated measures from the present to extapolate backwards in time and infer the age of the rock. How can we do that, especially given that we don't know how much of the radioactive isotope was present in our samples to begin with?
 
@@ -73,7 +78,8 @@ lmb <-log(2)/t.5 # convert to rate constant
 age <-sapply(rg.aln, function (x) x/lmb)
 
 age.n <-as.vector(age)
-res <-data.frame(Site=names(dat.spl),Slope=unlist(rg.aln),Age=age.n)
+res <-data.frame(Site=names(dat.spl),Slope=unlist(rg.aln),Age=signif(age.n,3))
+res$Age <-res$Age/10^6
 kable(res,row.names=FALSE)
 ```
 
