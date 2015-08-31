@@ -1,0 +1,119 @@
+---
+title: <center>Simulating Radiological Dating</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: no
+       toc_depth: 5
+---
+
+
+```{r,echo=FALSE,results='hide'}
+rdecay <-function(init){
+  x <-(c(init,rep(NA,7)))
+  for(i in 2:8){
+    flips <-rbinom(sum(x[i-1]),1,.5)
+    x[i] <-sum(flips)
+  }
+x
+  }
+```
+### Background
+
+After class on Monday, a student questioned me closely about the fundamentals of how radioactive decay occurs; in particular, how we can work from the idea that a particular radioactive element has a particular half-life.
+
+My answer was that these values are ones that have been determined empirically by nuclear physicists, and that all of the accumulated evidence supports the hypothesis that half-lives are constant.  But as I reflected on the conversation, I thought the following might be useful in thinking through the basic concept of a half-life
+
+### Our Thought Experiment
+
+Imagine we start with 100 objects, and during a certain time period, half of them decay.  Intuition tells us that we would have 50 left, right?  We'll let's let the computer do that - essentially flip a coin, with thout come being that coins that come up heads (a 1 in binary notaton) survive and those that come up tails (0) decay.  Let's see what we get:
+
+```{r,echo=FALSE}
+set.seed(123)
+heads <-c(100,rep(NA,5))
+flips <-rbinom(100,1,.5)
+heads[2] <-sum(flips)
+heads[2]
+```
+OK.  Pretty close.  But now, returning to our model, we're left with 47 undecayed atoms, and **during the next time period, half of them decay**.  What happens then?  
+ 
+Well, we can repeat our experiment, only now starting with `r heads[2]` atoms:
+
+```{r,echo=FALSE}
+flips <-rbinom(heads[2],1,.5)
+heads[3]<-sum(flips)
+heads[3]
+```
+And we're down to 27.  Let's repeat the experiment 3 more times and then look at the results, starting from the beginning
+
+```{r,echo=FALSE}
+for(i in 4:6){
+  flips <-rbinom(heads[i-1],1,.5)
+  heads[i] <- sum(flips)
+}
+heads
+```
+And we can make a plot of these data, comparing our observations (shown as black circles) with what we would expect (the red line)
+```{r,echo=FALSE}
+plot(0:5,heads,xlab="Time",ylab="Undecayed Molecules",main="Simulated Nuclear Decay")
+
+exp <-c(100,50,25,12.5,6.25,3.125)
+lines(0:5,exp,col="red")
+```
+
+And we see a pretty good fit.  But now let's do somewthing else.  Instead of plotting the actual value of the number of undecayed atoms, let's plot the natural logarithm of them
+
+```{r,echo=FALSE}
+plot(0:5,log(heads),ylab="ln(Undecayed Molecules)",xlab="Time",main="Log-transformed nuclear decay")
+
+time <-c(0:5)
+fit <-lm(log(heads)~time)
+abline(fit,col="red")
+```
+So we get and excellent linear fit.  And a couple of important points emerge.
+
+1.  The y intercept of the line is in fact the number of molecules at time zero
+2.  The slope of the line is related to the rate at which the molecules decay (in our case 50% per time period)
+3.  Therefore, if we had, say the last three samples, we could determine the slope and extrapolate back to time zero, the time at which the mineral was created.
+
+But wait.  How do we know how many molecules were there at time zero?  This is where isochrons come in.  The basic principle is as follows:
+
+A.  If we take multiple samples of a rock, the number of radioactive atoms will vary.  Let's suppose we have four samples from a rock had, at the time of crystallization, the following numbers of radioactive atoms:
+
+```{r,echo=FALSE}
+set.seed(123)
+samp.init <-as.integer(runif(4,100,10000))
+samp.init <-sort(samp.init)
+samp.init
+```
+B.  Now they decay. Let's imagine they all go through 8 half lives.   What would we see?  In what follows, the columns (X1 through X4) refer to the four samples and the rows (1-8) for time, expressed in half-lives
+
+```{r,echo=FALSE}
+out <-sapply(samp.init,rdecay)
+data.frame(out)
+```
+C.  Now, let's look at what we have at time 8, which corresponds to the time we collected and analyzed the rock.  in each of the four samples, there are some decayed atoms and some undecayed:
+``
+```{r,echo=FALSE}
+decayed <-out[1,]-out[8,]
+undecayed=out[8,]
+data.frame(decayed,undecayed)
+```
+D.  We can then plot those, along with a best-fit line for the data as follows:
+
+```{r,echo=FALSE}
+plot(undecayed,decayed,main="Hypothetical Isochron")
+reg <-lm(decayed~undecayed)
+abline(reg,col="red")
+lsl <- log(reg$coefficients[2])
+age.est <-(lsl+1)/log(2)
+```
+And we see something vary reminiscent of the isochrons we discussed in class (the only difference is that in this case, we have not normalized the decayed and undecayed atoms to the number of atoms of a stable isotope).  So, remembering that the slope can be shown to be equal to e^&lambda;t-1^, we can do some fairly simple math to show that our estimate of t, the age of the sample, is `r signif(age.est,3)`, which is very close to the actual value of 8.
+
+### Conclusion
+
+In this little simulation, we did a lot of simplification.  In particular, we scaled time by number of half lives - in real life it would be in years.  Furthermore, we assumed that we could simply count the absolute numbers of decayed and undecayed atoms; in real life, of course, we need to normalize by another stable isotope of the element that is the product of the decay, since we do not know the isotopic condition of that element at the time of rock formation.  Nevertheless, we can see from this exercise that in fact, starting with the simplest possible simulation, a coin flip, we can model real radioactive decay and arrive at an estimate of age that is very close to that which we in fact had determined at the outset.
+
+Finally, look back at our hypothetical isochron.  In truth, it is not all that great a fit to a linear relationship.  Why not?  To answer that, all we need to do is to look at the magnitudes of the numbers of decayed and undecayed atoms.  After eight half lives, most of the starting molecules have decayed, so that sampling error alone will generate random variation among the samples.
