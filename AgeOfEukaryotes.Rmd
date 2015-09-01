@@ -1,0 +1,48 @@
+---
+title: <center>The Age of Eukaryotes</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+Scratch file to see if we can make error bars, and if so do a summary figure on eukaryote ages.
+
+```{r}
+library(Hmisc)
+library(knitcitations)
+```
+Data are from [Sharpe et al, 2015](http://link.springer.com/chapter/10.1007/978-94-017-9642-2_1).  
+```{r}
+x <-1:10
+y <-x+rnorm(10)
+delta <-runif(10)
+errbar(x,y,y+delta,y-delta)
+```
+OK.  So that works.  Now, working from the data we have estimates for the following:
+
+1.  LECA
+2.  Metazoans
+3.  Fungi
+4.  Dictylstelids
+5.  Stomatophyta
+6.  Bangiales/Florideophyceae
+
+```{r}
+ages <-c(1000,750,780,370,410,580)
+labs <-c("Root","Metazoans","Fungi","Slime Molds","Land Plants","Red Algae")
+plot(ages,ylim=c(0,1200),xaxt="n",xlab="",pch=18)
+axis(1,at=1:6,labels=labs,las=2,cex=.6)
+```
+OK.  That gets the basics down.  Now create a vector of errors
+
+```{r}
+err <-c(100,20,50,100,10,100)
+errbar(1:6,ages,ages+err,ages-err,xaxt="n",xlab="",ylab="Age (MY)")
+axis(1,at=1:6,labels=labs,las=2,cex.axis=.8)
+abline(h=540,col="blue")
+```
+
