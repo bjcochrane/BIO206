@@ -52,4 +52,12 @@ Make a tree of this stuff
 euk.tree <-read.tree("./Data/Eukaryotes.txt")
 plot(euk.tree)
 ```
+And we can now do the fancy plotting
+```{r}
+library(strap)
+```
+```{r}
+euk.tree$root.time <-2000
+geoscalePhylo(tree=ladderize(euk.tree,right=FALSE),label.offset=0,cex.age=.8,cex.ts=.8,cex.tip=.8,unit="Era",erotate=90,tick.scale="no",boxes="Era")
+```
 

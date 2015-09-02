@@ -16,5 +16,10 @@ dat.names=c("Midterms","Final","Module Assignments","Clickers")
 ```{r}
 pie(dat,labels=dat.names,col = c("purple", "violetred1", "green3","cornsilk"),cex=.8)
 ```
-
+```{r}
+eras <-c(4600-4000,4000-2500,2500-541,541)
+Eon <-c("Hadean","Archaean","Proterozoic","Phenerozoic")
+pie(eras,labels=Eon,radius=1,cex=.8,angle=90,clockwise=TRUE,col=c("darkred","red","darkorange","blue"))
+```
+Hmm.  I wonder if a stacked bar would work.
 

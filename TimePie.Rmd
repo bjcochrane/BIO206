@@ -1,0 +1,12 @@
+---
+title: <center>Pie chart of time scale</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%%B %%d %%Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+So the idea is to make one figure to drive home the overall structure of the geological time scale.
