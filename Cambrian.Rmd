@@ -1,0 +1,48 @@
+---
+title: <center>Quantifying the Cambrian</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+Based on Erwin's 2011 paper, we're going to see if we can recreate the figure, only leaving out the phylogeny for now.
+
+```{r}
+library(strap)
+```
+
+```{r}
+phyla.dat <-data.frame(Time=c(575,540,375,200,50),Phyla=c(3,25,26,27,28))
+phyla.dat
+```
+Now there's a really easy way to get this
+
+```{r}
+plot(phyla.dat[,1],phyla.dat[,2],type="s",xlim=c(600,0),xlab="Time Before Present (MY)",ylab="Number",main="Phyla",cex.main=1)
+abline(v=540,col="red",lty=2,lwd=2)
+```
+ok.  Now classes
+
+```{r}
+clas.dat <-data.frame(Time=c(575,540,525,475,450,375,350,180,150,65,0),Classes=c(4,118,142,145,148,157,158,160,161,165,165))
+clas.dat
+```
+```{r}
+plot(clas.dat[,1],clas.dat[,2],type="s",xlim=c(600,0),xlab="Time Before Present (MY)",ylab="Number",main="Classes",cex.main=1)
+abline(v=540,col="red",lty=2,lwd=2)
+```
+### Palfrey tree
+
+```{r}
+palfrey <-read.tree("./Data/Palfrey.txt")
+plot(palfrey)
+```
+```{r}
+
+palfrey$root.time <-1300
+geoscalePhylo(tree=ladderize(palfrey,right=FALSE),label.offset=0,cex.age=.8,cex.ts=.8,cex.tip=.8,unit="Eon",erotate=45,box="Eon",tick.scale=500)
+```
+This is pretty good.  Need to get a few more nodes; maybe add plants?

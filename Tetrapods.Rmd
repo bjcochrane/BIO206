@@ -16,7 +16,9 @@ Note also that these videos supplement but **do not replace** text or class mate
 ### The origin of tetrapods
 
 There are a lot of four-limbed creatures - mammals, reptiles, birds, amphibians, you name it.  A few are aquatic or marine, but most are land-based. This is clearly a very successful adaptation, but how did it occur.  Furthermore, do this wide diversity of taxa have a common evolutionary origin?  In this video, Neil Shubin, a paleontologist addresses this question and describes 
-So how did this initial adaptation take place?  We've all seen cartoons of fish flopping onto land and 
+So how did this initial adaptation take place?  We've all seen cartoons of fish flopping onto land and trying to walk; here we see how fossil evidence has been used to make inferences about that process (and once again relying on transitional forms in the fossil record).
+
+### Questions
 
 1.  **Focusing on limb structure, what is the evidence that all tetrapods have a common ancestor (that is, that they are monophyletic)?**
 1.  **Based on what you have seen in the video, are the wings of bats homologous?**  Be sure you are certain about the definition of "homology" before answering - look it up in the text if necessary.
