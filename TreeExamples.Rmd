@@ -1,0 +1,33 @@
+---
+title: <center>A Few Tree Problems</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+```{r}
+tre.1 <-"((((A,B),(C,D)),E),F);"
+```
+```{r}
+tre1.phy <-read.tree(text=tre.1)
+```
+first, plot rooted
+```{r}
+plot(tre1.phy,type="cladogram",no.margin=TRUE)
+
+```
+Then unrooted
+```{r}
+plot(tre1.phy,type="unrooted",no.margin=TRUE)
+
+```
+Try rerooting
+```{r}
+tre.2 <-root(tre1.phy,1,resolve.root=TRUE)
+plot(tre.2,type="c")
+
+```
+
