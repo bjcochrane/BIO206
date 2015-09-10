@@ -26,8 +26,27 @@ plot(tre1.phy,type="unrooted",no.margin=TRUE)
 ```
 Try rerooting
 ```{r}
-tre.2 <-root(tre1.phy,1,resolve.root=TRUE)
+tre.2 <-root(tre1.phy,6,resolve.root=TRUE)
 plot(tre.2,type="c")
 
+```
+
+So do this with an sapply to generate all six trees
+```{r}
+tre.3 <-lapply(1:6,function(x) root(tre1.phy,x,resolve.root=TRUE))
+par (mfrow=c(2,3))
+lapply(tre.3,plot,type="c",cex=1.5,edge.width=2)
+```
+Now do something which makes some sense
+
+```{r}
+tree42 <-c("((((Cat,Human),(Lizard,Bird)),Frog),Fish);")
+tr42.phy <-read.tree(text=tree42)
+plot(tr42.phy,edge.width=2,cex=1.5)
+```
+OK, fine.  But what if, for example, we made the bird the outgroup?
+
+```{r}
+plot(root(tr42.phy,1,resolve.root=TRUE),cex=1.5,edge.width=2)
 ```
 
