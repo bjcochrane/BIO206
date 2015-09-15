@@ -1,0 +1,71 @@
+---
+title: <center>Independent Contrasts</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+Extracted from Phytools.Rmd in SummerDevelopment15.  Scratch for now.  Using online data for Darwin's finches.
+
+```{r}
+library(phytools)
+geotree <- read.nexus("http://www.r-phylo.org/mediawiki/images/0/02/Geospiza.nex")
+geodata <-read.table("http://www.r-phylo.org/mediawiki/images/5/5c/Geospiza.txt")
+geotree <- drop.tip(geotree, "olivacea")
+plot(geotree)
+```
+Now, extract wing and tarsus data
+
+```{r}
+wg <-geodata$wingL
+tr <-geodata$tarsusL
+names(wg) <-names (tr) <-row.names(geodata)
+wg; tr
+```
+Do independent contrasts:
+
+```{r}
+pic.wg <-pic(wg,geotree)
+pic.tr <-pic(tr,geotree)
+```
+
+
+
+Next, do character mapping onto trees.
+
+```{r}
+cm.wg <-contMap(geotree,wg)
+cm.tr <-contMap(geotree,tr)
+par(mfrow=c(1,2))
+plot(cm.wg,legend=FALSE,main="Wing")
+nodelabels(round(pic.wg,2),cex=.8)
+plot(cm.tr,legend=FALSE,main="Tarsus")
+nodelabels(round(pic.tr,2),cex=.8)
+par(mfrow=c(1,1))
+```
+and plot regression
+```{r}
+plot(pic.tr,pic.wg,xlab="Tarsus Length",ylab="Wing Length",pch=17)
+lm2 <-lm(pic.wg~pic.tr -1)
+abline(lm2,col="red",lwd=2)
+summary(lm2)
+```
+Now, what about beak depth vs. wing length?
+
+```{r}
+bkd <-geodata$culmenL
+names(bkd) <-row.names(geodata)
+pic.bkd <-pic(bkd,geotree)
+```
+And do regression and plot,
+```{r}
+plot(pic.bkd,pic.wg,xlab="Beak Depth",ylab="Wing Length",pch=17)
+lm2 <-lm(pic.wg~pic.bkd -1)
+abline(lm2,col="red",lwd=2)
+summary(lm2)
+```
+Ignore above stuff - with these results, everything is correlated.
