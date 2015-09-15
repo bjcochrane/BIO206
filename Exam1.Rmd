@@ -1,0 +1,13 @@
+---
+title: "Exam1"
+author: "Bruce Cochrane"
+date: "September 15, 2015"
+output: html_document
+---
+```{r}
+pr1.new <-"(((Lizard,Icthyosaurs),((Birds, Dinosaurs),Pterosaurs)),(((Elephants,Dolphins),Primates),Rodents));"
+pr1.tre <-read.tree(text=pr1.new)
+
+plot(pr1.tre,cex=1,type="phylogram",direction="u",font=2)
+```
+
