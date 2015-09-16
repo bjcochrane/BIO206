@@ -57,7 +57,7 @@ summary(lm2)
 Now, what about beak depth vs. wing length?
 
 ```{r}
-bkd <-geodata$culmenL
+bkd <-geodata$beakD
 names(bkd) <-row.names(geodata)
 pic.bkd <-pic(bkd,geotree)
 ```
@@ -69,3 +69,28 @@ abline(lm2,col="red",lwd=2)
 summary(lm2)
 ```
 Ignore above stuff - with these results, everything is correlated.
+
+### Making up a hypothetical
+
+```{r}
+t2.new <-"(((Mouse:3,Rat:3):4,(Rabbit:1,Hare:1):6):2,(Skunk:2,Raccoon:2):7);"
+t2.tr <-read.tree(text=t2.new)
+t2.tr$node.label=1:5
+plot(t2.tr,type="p")
+nodelabels(1:5)
+```
+OK.  Now invent two random traits
+```{r}
+set.seed(3451)
+tr1 <-runif(6,6,8)
+tr2 <-runif(6,20,40)
+
+pic1 <-pic(tr1,t2.tr)
+pic2 <-pic(tr2,t2.tr)
+plot(pic1,pic2,pch=18,xlab="pH",ylab="Amylase Activity",main="Independent Contrasts",xlim=c(0,0.55))
+text(pic1,pic2,pos=4)
+reg <-(lm(pic2~pic1))
+summary(reg)
+# abline(reg,lty=2)
+```
+
