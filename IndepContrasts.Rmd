@@ -76,8 +76,8 @@ Ignore above stuff - with these results, everything is correlated.
 t2.new <-"(((Mouse:3,Rat:3):4,(Rabbit:1,Hare:1):6):2,(Skunk:2,Raccoon:2):7);"
 t2.tr <-read.tree(text=t2.new)
 t2.tr$node.label=1:5
-plot(t2.tr,type="p")
-nodelabels(1:5)
+plot(t2.tr,type="p",main="Varmint Phylogeny")
+nodelabels(1:5,bg="transparent",adj=c(1.5,1.5),frame="none")
 ```
 OK.  Now invent two random traits
 ```{r}
