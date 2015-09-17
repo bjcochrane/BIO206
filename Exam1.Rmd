@@ -10,4 +10,25 @@ pr1.tre <-read.tree(text=pr1.new)
 
 plot(pr1.tre,cex=1,type="phylogram",direction="u",font=2)
 ```
+### Problem 8
+```{r}
+mam.new <-"(((((wolves,pangolins),horses),bats),((deer,whales),(hedgehogs,shrews))),rabbits);"
+mam.tr <-read.tree(text=mam.new)
+par(mfrow=c(1,2))
+plot(mam.tr,main="I",cex=1.5)
+plot(mam.tr,type="c",main="II",cex=1.5)
+par(mfrow=c(1,1))
+```
+### Elephants and mastadons
+
+```{r}
+prob.new <-"((((Asian_Elephant:7,Mammoth:4):2,(African_Bush_Elephant:3, African_Forest_ Elephant:3):6):15,Mastodon:13):10,Manatee:35);"
+prob.tr <-read.tree(text=prob.new)
+plot(prob.tr,type="p",edge.color=cols,edge.width=2,edge.lty=c(rep(1,9),2))
+#edgelabels()
+```
+Try to color
+```{r}
+cols <-c(rep("black",4),"red",rep("black",3),"red","black")
+```
 
