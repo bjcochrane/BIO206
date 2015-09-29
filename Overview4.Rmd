@@ -32,9 +32,9 @@ Class|Date|Topic
 
 Date|Required
 ---|---
-9/21|Ch  5 pp
+9/21|Ch  5 
 9/23|Ch. 6 pp.159-162; Noor Videos
 9/25|Ch. 6 pp. 165-172
 9/28|Ch. 6 pp. 172-186
-9/30|Ch. 5 pp. 145-154
+9/30|Ch. 6 pp. 192-197
 10/2-4|Chapter 7
