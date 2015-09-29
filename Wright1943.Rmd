@@ -1,0 +1,30 @@
+---
+title: <center>Subdivision</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%%B %%d %%Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+Based on [Dobzhansky and Eppling, 1942](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1209161/pdf/317.pdf) and [Wright, 1943](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1209197/pdf/139.pdf)
+
+First, create a vector of allele frequencies
+
+```{r}
+q <-c(.551,.078,.002,.017,.027,.151)
+het <-1*q*(1-q)
+het
+mean(het)
+```
+```{r}
+het.av <-2*mean(q)*(1-mean(q))
+het.av
+```
+```{r}
+F <-1-mean(het)/het.av
+F
+```
+
