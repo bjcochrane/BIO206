@@ -24,7 +24,9 @@ Class|Date|Topic
 2.|September 23|The Hardy-Weinberg Equilibrium
 3.|September 25|Random Forces in Evolution
 4.|September 28|Natural Selection Theory
-5.|September 30|Genetics of Complex Traits
+5.|September 30|Mutation, Migration and Selection
+6.|October 2|Examples; Introduction to Quantitative Genetics
+7.|October 5|Quantitative Genetics; Review
 
 ### Preparation
 
@@ -34,4 +36,5 @@ Date|Required
 9/23|Ch. 6 pp.159-162; Noor Videos
 9/25|Ch. 6 pp. 165-172
 9/28|Ch. 6 pp. 172-186
-9/30|Ch. 5 pp. 145-154; Ch 7
+9/30|Ch. 5 pp. 145-154
+10/2-4|Chapter 7
