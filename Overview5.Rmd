@@ -8,17 +8,15 @@ output:
 ---
 ### Overview and Objectives
 
-So now that we've covered (at least in theory) the genetic basis for evolutionary change, we need to ask whether in fact the hypotheses we've generated can be tested, either in nature or in the laboratory.  In this module, we will spend a small amount of class time (two periods) looking at some examples, both from Chapter 8 and elsewhere.  In addition, the assignment associated with the module will require you to select one of a few examples and explore it in greater depth.
+So now that we've covered (at least in theory) the genetic basis for evolutionary change, we need to turn our attention to evolution in the field.  To consider any such example, we need to consider that at the phenotypic level:
 
-### Class Topics
+1.  Variation must exist
+2.  It must be heritable
+3.  Particular variants confer an adaptive advantage
 
-Class|Date|Topic
----|---|---
-1.|October 2|Part 1
-2.|October 5|Part 2
+Having established those conditions, we can then turn to addressing the genetic basis for the variation and determine if allele frequency dynamics of the gene(s) involved are consistent with predictions based on population genetic theory.
 
-### Preparation
+Chapter 8 covers a number of examples; we may mention of few of these in class.  However, we will not have specific classes devoted to this material; rather you will examine these concepts in the context of the paper assignment associated with the module.  We will discuss this in class on September 30.  Material from this module will **not** be included in the second mid-term exam.
 
-Date|Required
----|---
-10/2|Ch. 8 pp. 231-248
+
+
