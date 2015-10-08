@@ -1,0 +1,159 @@
+---
+title: <center>Hominidae Tree</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%%B %%d %%Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+Newick tree obtained from Open Tree of Life.
+```{r}
+homid.tr <-read.tree("./Data/hominidae.new.txt")
+```
+It's bs.  Stick with treebase
+```{r}
+library(treebase)
+
+```
+Do a search
+```{r}
+homo.tr <-search_treebase("13209",by="id.study",max_trees=5,branch_lengths=TRUE)
+```
+```{r}
+homo.tr <-collapse.singles(homo.tr)
+plot(homo.tr[[1]],cex=.5)
+```
+
+### October 7
+
+Try to find the RAG-1 tree from treebase
+```{r}
+rag.tr <-search_treebase("S1781",by="id.study")
+str(rag.tr)
+```
+Nope.  Those are plants.
+
+As an alternative - use read.genbank to get sequences.  Use a bunch of things together
+
+#### get common names
+
+```{r}
+options(eolApiKey="640ea5ba807d952f4e72b680246624875ebe17bb")
+```
+First, we'll do a walk through from the [Rag-1 paper supplemental data](http://sysbio.oxfordjournals.org/content/56/4/543/T1.expansion.html)
+
+```{r}
+sci2comm("Xenosaurus grandis")
+```
+OK.  So we fooled around in excel and made a csv of just the genus, species and accession numbers.
+```{r}
+dat <-read.csv("./Data/rag-1.csv")
+head(dat)
+```
+So what we want to do is first to get the common names, then select which we want, and finally pull the sequences.  We will need to paste the first two columns.  Let's do one example first and then an lapply
+```{r}
+test <-paste(dat[4,1],dat[4,2],sep=" ")
+test.nm <-sci2comm(test)
+test.nm
+```
+So we could do an apply
+```{r}
+nms.sci <-apply(dat[,1:2],1,function(x) paste(x[1],x[2],sep=" "))
+nms.com <-sci2comm(nms.sci,db="ncbi")
+```
+Very cool!  Looks like we have a list that includes scientific names and common names for each.  The problem is that a number failed.  So how can we remove the empty ones?  Last try and then on to genetics.
+
+```{r}
+nms.com.ed <-nms.com[sapply(nms.com,function(x) str(x)!="list()")]
+```
+Another possibility
+
+```{r}
+which(str(nms.com)!="list()")
+```
+Another approach.  We got the ones with common names by unlisting above; 
+
+```{r}
+dat[]
+```
+
+From stack overflow:
+
+```{r}
+delete.NULLs  <-  function(x.list){   # delele null/empty entries in a list
+    x.list[unlist(lapply(x.list, length) != 0)]
+}
+```
+
+```{r}
+nms.com.ed <-delete.NULLs(nms.com)
+```
+OK.  Now we have a list of the scientific and common names; problem is to get it back to accessions:  To do it maybe we can cbind the pasted names and then subset.
+```{r}
+dat <-cbind(dat,nms.sci)
+head(dat)
+```
+### Next day.
+
+So what we want to do is to is to subset dat (column 4, or names.sci) by names(nms.com.ed), right?
+```{r}
+names(nms.com.ed)
+```
+So using the trick from stack overflow.
+
+```{r}
+dat.ed <- dat[dat$nms.sci %in% names(nms.com.ed),]
+head(dat.ed)
+```
+All right!!  Probably need to clean this up, but now we should be able to go after the sequences.  But before that. let's cbind the common names
+
+```{r}
+dat.ed <-cbind(dat.ed,unlist(nms.com))
+dat.ed
+```
+Very good.  Now for the sequences.
+
+```{r}
+dat.seq <-read.GenBank(dat.ed$Accession)
+```
+```{r}
+names(dat.seq) <-dat.ed[,5]
+dat.aln <-muscle(dat.seq)
+```
+```{r}
+str(dat.aln)
+```
+```{r}
+image.DNAbin(dat.aln[,6200:8100],cex.lab=.5)
+```
+So that gives us good data for all but 5 species.  We need to rename all of them with common names and then delete those, at which point we'll have a great data set (I hope).
+
+That has been done above.  Now to figure out a means to remove the five.
+```{r}
+to.del <-c(16,17,25,27,29)
+image.DNAbin(dat.aln[-to.del,6200:8100],cex.lab=.5)
+```
+
+OK.  So that looks like what we want.  Now we need to write it as a fasta.
+
+```{r}
+dat.aln.ed <-dat.aln[-to.del,6200:8100]
+write.dna(dat.aln.ed,"./Data/tetrapods.fasta",format="fasta")
+```
+
+Hmmm. so it's pretty good, but we need more species.  After a blast search with the coelacanth as a query, we downloaded Acc numbers.  See if we can get names:
+
+```{r}
+acclist <-read.table("./Data/Rag1.acc.txt")
+
+```
+OK.  Now for the names
+```{r}
+nmes.bls <-sci2comm(names(bls.seq),db="eol")
+```
+```{r}
+bls.seq <-read.GenBank(acclist[,1])
+```
+So we can read the sequences, but we can't retrieve the common names.
