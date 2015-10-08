@@ -16,7 +16,7 @@ So now that we've covered (at least in theory) the genetic basis for evolutionar
 
 Having established those conditions, we can then turn to addressing the genetic basis for the variation and determine if allele frequency dynamics of the gene(s) involved are consistent with predictions based on population genetic theory.
 
-Chapter 8 covers a number of examples; we may mention of few of these in class.  However, we will not have specific classes devoted to this material; rather you will examine these concepts in the context of the paper assignment associated with the module.  We will discuss this in class on September 30.  Material from this module will **not** be included in the second mid-term exam.
+Chapter 8 covers a number of examples; we may mention of few of these in class.  However, we will not have specific classes devoted to this material; rather you will examine these concepts in the context of the paper assignment associated with the module.  We will discuss this in class on October 2.  Material from this module will **not** be included in the second mid-term exam.
 
 
 
