@@ -1,0 +1,96 @@
+---
+title: <center>Gene and Species Trees</center>
+author: <center></center>
+date: <center>`r format(Sys.Date(),format="%B %d %Y")`</center>
+output: 
+    html_document:
+       css: Chapter.css
+       toc: yes
+       toc_depth: 5
+---
+
+Trying to write some basic code to do gene and species trees.  if it works, we'll try to write it up.
+
+#### Basic ms call
+
+Situation we have is two populations, with overall &theta; = 11, which have been separate for 10,000 generations.  First, we'll just look at a few trees:
+
+```{r}
+dat.1 <-ms(nsam=10,nreps=1,opts=c("-t 10 -I 2 5 5  -ej .375 2 1 -T"))
+
+tre.1 <-read.tree(text=dat.1)
+
+nms <-tre.1$tip.label
+nm2 <-as.numeric(sapply (nms, function (x) substr(x,2,nchar(x))))
+nmcol=nm2
+nmcol[which(nm2<=5)]="red"
+nmcol[which(nm2>5&nm2<=20)]="darkgreen"
+#nmcol[which(nm2>20]="blue" 
+tr <-plot(tre.1,tip.color=nmcol)
+# abline(v=tr$x.lim[2]-.375,col="red")
+axisPhylo()
+#add.scale.bar(cex = 0.7, font = 2, col = "red")
+tr$x.lim
+```
+Need to work on this.  Maybe not worth it.
+
+
+Interesting - so with the above, in the absence of migration, lineage sorting always occurs.  Actually, that sort of makes sense.  But enough for now.
+
+
+#### 1.  How about simple gene geneaology
+
+The following has no mutation
+```{r}
+ms1 <-ms(nsam=10,nreps=1, opts=c("-T"))
+tree1 <-read.tree(text=ms1)
+plot(tree1,edge.width=2)
+axisPhylo()
+```
+
+Now add some random mutations (by adding theta)
+
+```{r}
+ms2 <-ms(nsam=10,nreps=1, opts= c("-t 30 -T"))
+tree2 <-read.tree(text=ms2)
+plot(tree2,edge.width=2)
+axisPhylo()
+```
+Not too much different, right?
+
+#### Throw in some expansion.
+
+Basic code taken from SkylinePlots.Rmd
+
+```{r}
+N <-100000
+r <-.02 #growth rate per year
+gen <-5 #generations per year
+nyears <-(4*N)/5 # 1 coalescent unit in years
+g <-r*nyears # growth rate in coalescence units
+m.out <-ms(nsam=20, nreps=1, opts=(paste("-t 12 -T -r 0 702 -G",g,sep=" ")))
+tree.gr <-read.tree(text=m.out)
+plot(tree.gr,edge.width=2,cex=.8)
+axisPhylo()
+```
+```{r}
+plot(skyline(tree.gr,epsilon=.0004),lwd=2)
+```
+So we see that it leads to longer branches - need to explain.
+
+#### Bottleneck
+
+Now use modification of example from ms documentation
+
+```{r}
+ms3 <-ms(nsam=30,nreps=1,opts=c("-t 12 -G 6.93 -eG 0.2 0.0 -eN 0.3 0.5 -T"))
+tree3 <-read.tree(text=ms3)
+plot(tree3)
+axisPhylo()
+```
+And do a skyline
+```{r}
+plot(skyline(tree3,epsilon=.0015))
+```
+
+So we'll think about all of this.  

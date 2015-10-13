@@ -14,8 +14,9 @@ homid.tr <-read.tree("./Data/hominidae.new.txt")
 ```
 It's bs.  Stick with treebase
 ```{r}
-library(treebase)
 
+library(treebase)
+library(taxize)
 ```
 Do a search
 ```{r}
@@ -157,3 +158,46 @@ nmes.bls <-sci2comm(names(bls.seq),db="eol")
 bls.seq <-read.GenBank(acclist[,1])
 ```
 So we can read the sequences, but we can't retrieve the common names.
+
+So let's do some tree building.
+
+### Distance
+```{r}
+demo.dat  <-dat.aln[-to.del,6200:8100] #save edited data
+```
+```{r}
+demo.dist <-dist.dna(demo.dat)
+```
+```{r}
+plot(nj(demo.dist),cex=.7)
+```
+We may be able to do this from phangorn
+
+```{r}
+library(phangorn)
+```
+
+```{r}
+demo.upg <-upgma(demo.sub)
+plot(demo.upg,cex=.7)
+```
+```{r}
+demo.pars <-upgma(demo)
+```
+```{r}
+demo.phy <-phyDat(demo.sub)
+demo.pars <- pratchet(data=demo.phy)
+plot(demo.pars,cex=.7)
+```
+Need a smaller sample
+```{r}
+demo.sub <-demo.dat[sample(1:43,10),]
+str(demo.sub)
+```
+
+Now need to write demo.sub for ml
+
+```{r}
+write.dna(demo.sub,"./Data/tetra.sub.fasta,f",format="fasta")
+```
+
